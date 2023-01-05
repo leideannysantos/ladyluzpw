@@ -1,0 +1,173 @@
+* {
+    /*configuracoes globais usando o asterisco */
+    margin: 3;
+    /* tira todas as margens padrao */
+    padding: 3;
+    /* tira todas os paddings padrao */
+    box-sizing: border-box;
+    /* parar fazer os calculos dos tamanhos dos elementos ja incluindo margem, borda e padding */
+    font-family: Roboto, sans-serif;
+    /* define a tipografia do seu site, podem pegar do google fonts, colocar varias fontes 
+    e por fim a  fonte generica...se pegar do google fonts tipo essa Roboto q eu peguei, lembrem de colocar
+    o link no head de todos os documentos html */
+    /*   background-color: #f1d5ecf8; */
+
+}
+
+.cabecalho {
+    /* mexendo na classe cabecalho aquela div que usei para separar os layouts da pagina */
+    display: flex;
+    /* transformo ela em flex, pra usar as propriedades de posicionamento do flexbox */
+    justify-content: space-between;
+    /* esse é o alinhamento horizontal, o que isso ta fazendo?
+    ele pega todo o espaco em branco disponivel e coloca entre os elementos filhos que sao aquelas duas divs
+    uma contendo a imagem do logo e a outra contendo o menu de navegacao, isso faz cada uma ficar em uma ponta
+    do topo; */
+    flex-direction: column;
+    background-color: #faeae0;
+    align-items: center;
+    /* alinhando verticalmente a div do imagem do logo, com a div do menu ou seja
+    o menu vai ficar com o mesmo centro de altura que o logo, um alinhamento legal */
+
+    /* uma cor de fundo que pega todo o cabeçalho, item estetico */
+}
+
+.cabecalho ul li {
+    /* esse seletor diz, pegue todos os li dentro de uma ul que esteja dentro de um elemento com a classe cabecalho e faça o que vou mandar */
+    float: left;
+    /* coloca os elementos da lista, lado a lado inves de um em cima do outro */
+    background-color: rgb(220, 220, 231);
+}
+
+.logo {
+    width: 16rem;
+}
+
+/* pegue todas as imagens dentro dos elementos com classe cabecalho, nesse caso so tem a imagem da logo 
+    margin: 4px; /* como tiramos todas as margens, o logo vai ta colado no canto da tela
+    e isso eh uma visualizaçao nao muito legal, entao 
+    nos mesmos definimos uma distancia que fique ao nosso gosto, geralmente se usa multiplos de 4 (4/8/12/16) */
+
+/* .conteiner-nave{background-color: aquamarine; width: auto; height: 2rem;margin: -5rem auto;} */
+
+.conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #faeae0;
+}
+
+.fototext {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+ul {
+
+    list-style-type: none;
+    margin: -5rem;
+    padding: 0cm;
+    overflow: hidden;
+    /* background-color: #b92828f8; */
+    border-style: dotted;
+    border-width: 2px;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: azure;
+}
+
+.ativa {
+    background-color: rgb(232, 238, 175);
+}
+
+.cont_foto {
+    width: 25%;
+    text-align: center;
+
+}
+
+.foto {
+    width: 100%;
+}
+
+.box {
+    width: 300px;
+    border: 5px solid black;
+    box-sizing: border-box;
+    /*content-box padrão*/
+}
+
+.elemento_formulario {
+    margin: 1rem;
+}
+
+
+.boxcontato {
+    background-color: #F5F5F5;
+    /*   padding: 30px; */
+    margin-bottom: 15px;
+    float: left;
+}
+
+
+
+.icones {
+    display: contents;
+    float: right;
+    width: 30px;
+    height: 30px;
+}
+
+.rodape {
+    background-color: rgb(196, 176, 176);
+    clear: both;
+    padding: 20px;
+    color: rgb(107, 26, 2);
+    font-size: 15px;
+    font-family: "arial", sans-serif;
+    align-items: center;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.line {
+    border-left: none;
+    background-color: #faeae0;
+
+    border-right: none;
+}
+
+.line a {
+    text-decoration: none;
+    color: black;
+}
+
+@media screen and(max-width:600px) {
+    .fototext {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        flex-direction: column !important;
+    }
+
+}
